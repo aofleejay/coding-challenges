@@ -16,6 +16,6 @@ for (let i = 0; i < content.length; i++) {
       let b = Math.sqrt(content[i] - (a * a))
       if (b === Math.floor(b)) count++
     }
+    console.log(`Case #${i + 1}: ${count}`)
   }
-  console.log(`Case #${i + 1}: ${count}`)
 }

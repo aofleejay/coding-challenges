@@ -1,29 +1,19 @@
 import math
 
-fileIn = open('double-squares.in', 'r')
-fileOut = open('double-squares.out', 'w')
-fileContent = fileIn.read().splitlines()
-T = fileContent.pop(0)
+f = open('double-squares.in', 'r')
+N = f.readline()
+numbers = f.readlines()
 
-for i, X in enumerate(fileContent):
+for i, X in enumerate(numbers):
   count = 0
   X = int(X)
   if X == 0:
-    fileOut.write('Case #'+ str(i+1) + ': 1\n')
-  elif X == 1:
-    fileOut.write('Case #'+ str(i+1) + ': 1\n')
-  elif X == 2:
-    fileOut.write('Case #'+ str(i+1) + ': 1\n')
-  elif X == 3:
-    fileOut.write('Case #'+ str(i+1) + ': 0\n')
+    print("Case #{}: 1".format(i + 1))
   else:
-    bound = int(math.sqrt(X))
-    for A in range(0, bound+1):
-      for B in range(A, bound+1):
-        if A * A + B * B > X:
-          break
-        if A * A + B * B == X:
-          count=count+1
-    fileOut.write('Case #'+ str(i+1) + ': ' + str(count) + '\n')
-fileIn.close() 
-fileOut.close() 
+    bound = int(math.ceil(math.sqrt(X / 2)))
+    for A in range(0, bound):
+      B = math.sqrt(X - (A * A))
+      if B == math.floor(B):
+        count = count + 1
+    print("Case #{}: {}".format(i + 1, count))
+f.close() 

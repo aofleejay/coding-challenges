@@ -13,3 +13,4 @@ for index, sentence in enumerate(sentences):
   countWithMultiply = zip(range(26, 0, -1), countAlphabet)
   result = sum(count * multiply for count, multiply in countWithMultiply)
   print("Case #{}: {}".format(index + 1, result))
+f.close()

@@ -12,5 +12,4 @@ for index, sentence in enumerate(sentences):
   if (len(values) != 8): 
     print("Case #{}: 0".format(index + 1))
   else:
-    values.sort()
-    print("Case #{}: {}".format(index + 1, values[0]))
+    print("Case #{}: {}".format(index + 1, min(values)))

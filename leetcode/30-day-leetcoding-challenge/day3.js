@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function (nums) {
+const maxSubArray = (nums) => {
   let max = nums[0]
   for (i = 0; i < nums.length; i++) {
     let sum = 0

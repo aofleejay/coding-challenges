@@ -2,7 +2,7 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function (prices) {
+const maxProfit = (prices) => {
   let profit = 0
   for (i = 1; i < prices.length; i++) {
     if (prices[i] > prices[i - 1]) {

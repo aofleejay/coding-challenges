@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {number}
  */
-var squareAndSum = function (n) {
+const squareAndSum = (n) => {
   return `${n}`
     .split('')
     .reduce((p, c) => parseInt(p) + parseInt(c) * parseInt(c), 0)
@@ -12,7 +12,7 @@ var squareAndSum = function (n) {
  * @param {number} n
  * @return {boolean}
  */
-var isHappy = function (n) {
+const isHappy = (n) => {
   const visited = []
 
   while (true) {

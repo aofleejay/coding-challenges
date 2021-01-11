@@ -4,7 +4,7 @@
  */
 const moveZeroes = (nums) => {
   var countZero = 0
-  for (i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     if (nums[i] === 0) {
       countZero++
       nums.splice(i, 1)

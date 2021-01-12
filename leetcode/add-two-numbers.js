@@ -16,19 +16,28 @@ var addTwoNumbers = function (l1, l2) {
     n1 = l1,
     n2 = l2,
     node,
+    newNode,
     firstNode
 
   firstNode = node = new ListNode()
 
   while (n1 || n2) {
-    sum = (n1 ? n1.val : 0) + (n2 ? n2.val : 0) + carry
+    sum = 0
 
-    node.next = new ListNode(sum % 10)
+    if (n1) {
+      sum += n1.val
+      n1 = n1.next
+    }
+
+    if (n2) {
+      sum += n2.val
+      n2 = n2.next
+    }
+
+    node.next = new ListNode((sum + carry) % 10)
     node = node.next
-    carry = sum >= 10 ? 1 : 0
 
-    n1 = n1 ? n1.next : null
-    n2 = n2 ? n2.next : null
+    carry = sum + carry >= 10 ? 1 : 0
   }
 
   if (carry) {

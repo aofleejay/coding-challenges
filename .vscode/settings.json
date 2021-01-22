@@ -1,3 +1,6 @@
 {
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
